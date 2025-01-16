@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
-metadata: 
+metadata:
   name: app2
   namespace: argocd
-spec: 
+spec:
   destination:
     namespace: app2
     server: "https://kubernetes.default.svc"
   project: default
-  source: 
+  source:
     path: kustomize-guestbook
-    repoURL: "https://github.com/mabusaa/argocd-example-apps.git"
+    repoURL: "https://github.com/iulian0585/argocd-example-apps.git"
     targetRevision: master
     kustomize:
       namePrefix: staging-
